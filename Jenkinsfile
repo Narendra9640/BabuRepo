@@ -14,7 +14,7 @@ pipeline {
 
         stage ('Exec Maven') {
             steps {
-                 pom: 'maven-example/pom.xml',
+               
                     goals: 'clean install',
                     deployerId: "MAVEN_DEPLOYER",
                     resolverId: "MAVEN_RESOLVER"
