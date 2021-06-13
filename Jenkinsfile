@@ -10,17 +10,15 @@ pipeline {
         
         
         
-    
-
-        stage ('Exec Maven') {
+     stage('Build') {
             steps {
-               
-                    goals: 'clean install',
-                    deployerId: "MAVEN_DEPLOYER",
-                    resolverId: "MAVEN_RESOLVER"
+                sh 'mvn -B -DskipTests clean package'
             }
         }
-
+        stage('Test') {
+            steps {
+                sh 'mvn test'
+            }
        
     }
 }
