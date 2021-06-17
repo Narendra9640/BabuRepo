@@ -38,7 +38,7 @@ pipeline {
                         myimage.push()
                     }
                 }
-            }
+            
           }
         
         
