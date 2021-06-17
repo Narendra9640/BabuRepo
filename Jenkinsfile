@@ -31,7 +31,7 @@ pipeline {
           stage('DOCKER_IMAGE') {
             steps {
                 script {
-                    docker.withRegistry('https://registry.hub.docker.com','dockerhub'){
+                    docker.withRegistry('https://registry.hub.docker.com','narendra96'){
                         
                         myimage=    docker.build("narendra96/pipelinedemo")
                         
